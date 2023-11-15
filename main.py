@@ -17,8 +17,13 @@ def reachable(graph, start_node):
     result = set([start_node])
     frontier = set([start_node])
     while len(frontier) != 0:
-        ###TODO
-        pass
+        print("frontier", frontier)
+        node = frontier.pop()
+        print("visiting", node)
+        result.add(node)
+        for i in graph[node]:
+          if i not in result:
+            frontier.add(i) 
     return result
 
 
