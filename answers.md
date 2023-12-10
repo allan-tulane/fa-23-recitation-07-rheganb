@@ -12,7 +12,7 @@ Place all written answers from `recitation-07.md` here for easier grading.
   O(n+m)
 
 - **4)**
-  n
+  If there are n nodes, the worst case number of times is n. 
 
 - **5)**
   O(n+m)

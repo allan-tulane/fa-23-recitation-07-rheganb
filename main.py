@@ -31,9 +31,9 @@ def reachable(graph, start_node):
 
 
 def connected(graph):
-    ### TODO
-    pass
-
+    nodes = len(graph)
+    reach = reachable(graph, list(graph.keys())[0])
+    return len(reach) == nodes
 
 
 
@@ -42,6 +42,11 @@ def n_components(graph):
     Returns:
       the number of connected components in an undirected graph
     """
-    ### TODO
-    pass
+    results = []
+    visit = set(list(graph.keys()))
+    while len(visit) > 0:
+      node = visit.pop()
+      results.append(node)
+      visit -= reachable(graph, node)
+    return len(results)
 
